@@ -1,7 +1,9 @@
+import java.time.LocalDate;
+
 public class Main {
 
     public static void main(String... args){
-        Human man = new Human("John",22);
-        System.out.println(man);
+        LocalDate date1 = LocalDate.of(1992, 12,12);
+        System.out.println(date1);
     }
 }
