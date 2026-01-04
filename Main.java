@@ -35,6 +35,13 @@ public class Main {
         LocalDate end = LocalDate.of(2015, Month.MARCH, 30);
 
         Period period = Period.ofMonths(1);
+        Period annually = Period.ofYears(1);
+        Period quarterly = Period.ofMonths(3);
+// every 1 year
+// every 3 monthsWorking with Dates and Times
+        Period everyThreeWeeks = Period.ofWeeks(3);
+        Period everyOtherDay = Period.ofDays(2);
+        Period everyYearAndAWeek = Period.of(1, 0, 7);
 // create a period
         performAimalEnrichment(start, end, period);
 
