@@ -10,7 +10,15 @@ public class Main {
         }
     }
 
-
+    private static void performAimalEnrichment(LocalDate start, LocalDate end,
+                                                Period period) {
+// uses the generic period
+        LocalDate upTo = start;
+        while (upTo.isBefore(end)) {
+            System.out.println("give new toy: " + upTo);
+            upTo = upTo.plus(period);
+// adds the period
+        }}
     public static void main(String... args){
         LocalDate date1 = LocalDate.of(1992, 12,12);
         LocalDate date2 = LocalDate.of(1222, Month.JULY, 17);
@@ -25,7 +33,11 @@ public class Main {
 
         LocalDate start = LocalDate.of(2015, Month.JANUARY, 1);
         LocalDate end = LocalDate.of(2015, Month.MARCH, 30);
-        performAnimalEnrichment(start, end);
+
+        Period period = Period.ofMonths(1);
+// create a period
+        performAimalEnrichment(start, end, period);
+
 
 
 
