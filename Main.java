@@ -1,6 +1,15 @@
 import java.time.*;
 
 public class Main {
+    private static void performAnimalEnrichment(LocalDate start, LocalDate end) {
+        LocalDate upTo = start;
+        while (upTo.isBefore(end)) {
+// check if still before end
+            System.out.println("give new toy: " + upTo);
+            upTo = upTo.plusMonths(1);
+        }
+    }
+
 
     public static void main(String... args){
         LocalDate date1 = LocalDate.of(1992, 12,12);
@@ -13,6 +22,12 @@ public class Main {
 
         LocalDateTime dateTime1 = LocalDateTime.of(2015, Month.JANUARY, 20, 6, 15, 30);
         LocalDateTime dateTime2 = LocalDateTime.of(date1, time1);
+
+        LocalDate start = LocalDate.of(2015, Month.JANUARY, 1);
+        LocalDate end = LocalDate.of(2015, Month.MARCH, 30);
+        performAnimalEnrichment(start, end);
+
+
 
         System.out.println(date1);
         System.out.println(date2);
