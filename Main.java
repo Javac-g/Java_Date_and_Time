@@ -20,6 +20,8 @@ public class Main {
 // adds the period
         }}
     public static void main(String... args){
-        Test.one();
+        //Test.one();
+       // Test.two();
+        Test.three();
     }
 }

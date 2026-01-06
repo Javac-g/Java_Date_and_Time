@@ -1,7 +1,7 @@
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.Month;
+import java.time.*;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Test {
     public static void one(){
@@ -19,6 +19,12 @@ public class Test {
         LocalDateTime ldt2 = LocalDateTime.of(date2,time3);
         LocalDateTime ldt3 = LocalDateTime.now();
 
+        Long millis = System.currentTimeMillis();
+        Date date = new Date(millis);
+
+        LocalDate localDate = LocalDate.of(2026,1,6);
+        Date date11 = Date.from( localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+
         System.out.println("Time 1: " + time1);
         System.out.println("Time 2: " + time2);
         System.out.println("Time 3: " + time3);
@@ -32,5 +38,22 @@ public class Test {
         System.out.println("Local Date and Time 2: " + ldt2);
         System.out.println("Local Date and Time now: " + ldt3);
 
+    }
+
+    public  static void two(){
+        Calendar calendar = GregorianCalendar.getInstance();
+        calendar.set(Calendar.YEAR, 2026);
+        calendar.set(Calendar.MONTH,1);
+        calendar.set(Calendar.DAY_OF_MONTH,1);
+
+        System.out.print(calendar.get(Calendar.YEAR) + " - ");
+        System.out.print(calendar.get(Calendar.MONTH) + " - ");
+        System.out.print(calendar.get(Calendar.DAY_OF_MONTH));
+
+    }
+    public static void three(){
+        LocalDate localDate = LocalDate.of(2021, 12,23);
+        localDate = localDate.plusYears(2).plusMonths(5).plusDays(25);
+        System.out.println(localDate);
     }
 }
