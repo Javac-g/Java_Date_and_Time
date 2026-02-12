@@ -1,6 +1,7 @@
 package Vq;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
 
@@ -25,9 +26,24 @@ public class Main {
         System.out.println(lt3);
         System.out.println(lt4);
     }
+    public static void make_date_and_time(){
+        LocalDateTime ldt1 = LocalDateTime.of(2024,Month.OCTOBER,24,2,20);
+        LocalDateTime ldt2 = LocalDateTime.of(2024,Month.OCTOBER,24,2,20,10);
+        LocalDateTime ldt3 = LocalDateTime.of(2024,Month.OCTOBER,24,2,20,10,200);
+        LocalDateTime ldt4 = LocalDateTime.now();
 
+        LocalTime lt = LocalTime.now();
+        LocalDate ld = LocalDate.now();
+        LocalDateTime lcdq = LocalDateTime.of(ld,lt);
+        System.out.println(ldt1);
+        System.out.println(ldt2);
+        System.out.println(ldt3);
+        System.out.println(ldt4);
+        System.out.println(lcdq);
+    }
     public static void main(String... args){
         make_date();
         make_time();
+        make_date_and_time();
     }
 }
