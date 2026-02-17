@@ -4,7 +4,9 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Main {
     public static void make_date(){
@@ -45,10 +47,23 @@ public class Main {
 
     public static void date_instance(){
         Date date = new Date(275647648484L);
+        System.out.println(date);
+    }
+
+    public static void calendar(){
+        Calendar calendar = GregorianCalendar.getInstance();
+        calendar.set(Calendar.YEAR, 2017);
+        calendar.set(Calendar.MONTH, 12);
+        calendar.set(Calendar.DAY_OF_MONTH, 8);
+        System.out.print(calendar.get(Calendar.DAY_OF_MONTH) + ".");
+        System.out.print(calendar.get(Calendar.MONTH) + ".");
+        System.out.print(calendar.get(Calendar.YEAR));
     }
     public static void main(String... args){
         make_date();
         make_time();
         make_date_and_time();
+        date_instance();
+        calendar();
     }
 }
