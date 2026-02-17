@@ -59,11 +59,22 @@ public class Main {
         System.out.print(calendar.get(Calendar.MONTH) + ".");
         System.out.print(calendar.get(Calendar.YEAR));
     }
+
+    public static void operations(){
+        LocalDate date = LocalDate.of(2017, Month.NOVEMBER, 8);
+        date.plusYears(2).plusMonths(3).plusDays(4);
+        LocalDate date2 = date.plusYears(2).plusMonths(3).plusDays(4);;
+
+        System.out.println();
+        System.out.println(date);
+        System.out.println(date2);
+    }
     public static void main(String... args){
         make_date();
         make_time();
         make_date_and_time();
         date_instance();
         calendar();
+        operations();
     }
 }
