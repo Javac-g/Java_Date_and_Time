@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -65,9 +67,13 @@ public class Main {
         date.plusYears(2).plusMonths(3).plusDays(4);
         LocalDate date2 = date.plusYears(2).plusMonths(3).plusDays(4);;
 
+        LocalDateTime localDateTime = LocalDateTime.of(2017, Month.NOVEMBER, 8, 15, 38);
+        String dateTime = localDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM));
+        System.out.println(dateTime);
         System.out.println();
         System.out.println(date);
         System.out.println(date2);
+        System.out.println(dateTime);
     }
     public static void main(String... args){
         make_date();
