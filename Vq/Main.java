@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
+import java.util.Date;
 
 public class Main {
     public static void make_date(){
@@ -40,6 +41,10 @@ public class Main {
         System.out.println(ldt3);
         System.out.println(ldt4);
         System.out.println(lcdq);
+    }
+
+    public static void date_instance(){
+        Date date = new Date(275647648484L);
     }
     public static void main(String... args){
         make_date();
