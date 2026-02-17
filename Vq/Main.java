@@ -1,9 +1,6 @@
 package Vq;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.Month;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.Calendar;
@@ -69,11 +66,18 @@ public class Main {
 
         LocalDateTime localDateTime = LocalDateTime.of(2017, Month.NOVEMBER, 8, 15, 38);
         String dateTime = localDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM));
+
+        LocalDateTime dateTime2 = LocalDateTime.of(2017, 11, 26, 15, 38);
+        Period period = Period.ofYears(1).ofMonths(2).ofDays(3);
+        dateTime2= dateTime2.minus(period);
+
+        System.out.println(dateTime);
         System.out.println(dateTime);
         System.out.println();
         System.out.println(date);
         System.out.println(date2);
         System.out.println(dateTime);
+        System.out.println(dateTime2);
     }
     public static void main(String... args){
         make_date();
